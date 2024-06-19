@@ -1,0 +1,19 @@
+﻿@model ThriftManager.DTO.Requests.InitWalletRequest
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<form asp-action="InitWallet" method="post" class="p-4 border rounded shadow-sm bg-light">
+    <div class="form-group">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="WalletNumber" class="form-label"></label>
+        <input asp-for="WalletNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Account" class="form-label"></label>
+        <input asp-for="Account" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Init Wallet</button>
+</form>

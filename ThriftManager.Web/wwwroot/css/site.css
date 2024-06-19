@@ -1,0 +1,64 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* CSS Styles for the footer */
+
+.site-footer {
+    background-color: darkslateblue;
+    padding: 50px 0;
+}
+
+.footer-logo {
+    max-width: 100px; 
+}
+
+.site-footer h4 {
+    font-size: 18px;
+    color: white;
+}
+
+.site-footer p {
+    font-size: 14px;
+    color: white;
+}
+
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .social-links li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+        .social-links li a {
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+            .social-links li a:hover {
+                color: #007bff;
+            }

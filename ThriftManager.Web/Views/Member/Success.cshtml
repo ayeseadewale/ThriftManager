@@ -1,0 +1,25 @@
+﻿@model ThriftManager.Web.Models.SuccessViewModel
+
+@{
+    ViewData["Title"] = "Member Creation Success";
+}
+
+<h2 style="color:green"><b>Congratulations, @Model.MemberName!</b></h2>
+
+<p style="color:red">Your member account has been created successfully.</p>
+
+<h3>Would you like to start your contributions?</h3>
+
+<form asp-action="SubmitContributions" method="post">
+    <div>
+        @foreach (var menu in @Model.ContributionMenus)
+        {
+            <div>
+                <input type="checkbox" name="selectedMenus" value="@menu" id="@menu" />
+                <label for="@menu">@menu</label>
+            </div>
+        }
+    </div>
+    <button class="btn btn-danger" asp-controller="Home" asp-action="Index">No</button>
+    <button type="submit" class="btn btn-primary">Yes</button>
+</form>

@@ -1,0 +1,73 @@
+﻿@model ThriftManager.DTO.Requests.CreateGroupRequest
+@using ThriftManager.Utils.Enums;
+
+@{
+    ViewData["Title"] = "Create Group";
+}
+
+<h2 class="mb-4">Create Group</h2>
+<form asp-action="CreateGroup" method="post">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Title">Title</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Amount">Amount</label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Slots">Slots</label>
+                <input asp-for="Slots" class="form-control" />
+                <span asp-validation-for="Slots" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Period">Period</label>
+                <select asp-for="Period" class="form-control">
+                    @foreach (var period in Enum.GetValues(typeof(Period)))
+                    {
+                        <option value="@((int)period)">@period</option>
+                    }
+                </select>
+                <span asp-validation-for="Period" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="Tenure">Tenure</label>
+                <input asp-for="Tenure" class="form-control" />
+                <span asp-validation-for="Tenure" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="form-group">
+                <label asp-for="DueDay">Due Day</label>
+                <input asp-for="DueDay" class="form-control" />
+                <span asp-validation-for="DueDay" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Group</button>
+</form>
